@@ -37,3 +37,34 @@ with open('new_file.txt', 'a') as file:
     file.write('Hello!')
 
 # ######### Grocery list
+
+# Solution 1: with list append
+# item = ''
+# item_list = []
+# print("Please enter anything you want to add to the list and type quit when you are finished.")
+# while True:
+#     item = input()
+#     if item == 'quit':
+#         break
+#     if item not in item_list:
+#         item_list.append(item)
+#
+# with open('grocery.txt', 'w') as file:
+#     file.write('\n'.join(item_list))
+
+
+# Solution 2: with r+ mode
+item = ''
+print("Please enter anything you want to add to the list and type quit when you are finished.")
+
+with open('grocery.txt', 'r+') as file:
+    while True:
+        item = input()
+        if item == 'quit':
+            break
+        file.seek(0)
+        current = file.read()
+        if item not in current:
+            file.write(item + '\n')
+
+
