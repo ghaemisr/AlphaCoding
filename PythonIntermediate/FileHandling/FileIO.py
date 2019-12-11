@@ -1,4 +1,6 @@
-# ######### Reading files
+# In this lesson students will learn how to work with files. 'r', 'w', 'r+'
+
+# ######### 1) Reading files
 with open('myfile.txt', 'r') as file:
     content = file.read()
 
@@ -26,11 +28,11 @@ for i in listed:
         print(i.replace("\n", " ") + ".")
 
 
-# ######### Writing files
+# ######### 2) Writing files
 with open('new_file.txt', 'w') as file:
     file.write('Hello!')
 
-# ######### Appending to file
+# ######### 3) Appending to file
 with open('new_file.txt', 'a') as file:
     file.write('Hello!')
 
