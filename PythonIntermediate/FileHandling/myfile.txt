@@ -1,0 +1,7 @@
+Python is
+useful.
+It can
+even read and
+write files.
+Actually, it
+can do more.
